@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\joako\\Downloads\\Nueva carpeta (2)\\proyecto-anual\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{53954267-E7C5-4B32-844A-3AAD33C55632}|src\\Presentation\\Presentation.csproj|c:\\users\\joako\\downloads\\nueva carpeta (2)\\proyecto-anual\\src\\presentation\\presentation.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{53954267-E7C5-4B32-844A-3AAD33C55632}|src\\Presentation\\Presentation.csproj|solutionrelative:src\\presentation\\presentation.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C40CB804-0A28-4237-8A05-4FFDBE84C129}|src\\Business\\BusinessLogic.csproj|c:\\users\\joako\\downloads\\nueva carpeta (2)\\proyecto-anual\\src\\business\\businesslogic.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{C40CB804-0A28-4237-8A05-4FFDBE84C129}|src\\Business\\BusinessLogic.csproj|solutionrelative:src\\business\\businesslogic.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Presentation",
+              "DocumentMoniker": "C:\\Users\\joako\\Downloads\\Nueva carpeta (2)\\proyecto-anual\\src\\Presentation\\Presentation.csproj",
+              "RelativeDocumentMoniker": "src\\Presentation\\Presentation.csproj",
+              "ToolTip": "C:\\Users\\joako\\Downloads\\Nueva carpeta (2)\\proyecto-anual\\src\\Presentation\\Presentation.csproj",
+              "RelativeToolTip": "src\\Presentation\\Presentation.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-04T01:56:08.912Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BusinessLogic",
+              "DocumentMoniker": "C:\\Users\\joako\\Downloads\\Nueva carpeta (2)\\proyecto-anual\\src\\Business\\BusinessLogic.csproj",
+              "RelativeDocumentMoniker": "src\\Business\\BusinessLogic.csproj",
+              "ToolTip": "C:\\Users\\joako\\Downloads\\Nueva carpeta (2)\\proyecto-anual\\src\\Business\\BusinessLogic.csproj",
+              "RelativeToolTip": "src\\Business\\BusinessLogic.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-04T01:56:07.865Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
