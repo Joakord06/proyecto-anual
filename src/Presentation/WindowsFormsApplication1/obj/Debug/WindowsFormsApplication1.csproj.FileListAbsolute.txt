@@ -1,9 +1,0 @@
-C:\Users\Tecnica7_Net4\Documents\GitHub\proyecto-anual\src\Presentation\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
-C:\Users\Tecnica7_Net4\Documents\GitHub\proyecto-anual\src\Presentation\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
-C:\Users\Tecnica7_Net4\Documents\GitHub\proyecto-anual\src\Presentation\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
-C:\Users\Tecnica7_Net4\Documents\GitHub\proyecto-anual\src\Presentation\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
-C:\Users\Tecnica7_Net4\Documents\GitHub\proyecto-anual\src\Presentation\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
-C:\Users\Tecnica7_Net4\Documents\GitHub\proyecto-anual\src\Presentation\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
-C:\Users\Tecnica7_Net4\Documents\GitHub\proyecto-anual\src\Presentation\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
-C:\Users\Tecnica7_Net4\Documents\GitHub\proyecto-anual\src\Presentation\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
-C:\Users\Tecnica7_Net4\Documents\GitHub\proyecto-anual\src\Presentation\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
