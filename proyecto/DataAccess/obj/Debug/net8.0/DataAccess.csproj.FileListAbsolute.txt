@@ -1,0 +1,13 @@
+C:\Users\joako\Downloads\Nueva carpeta (2)\proyecto-anual\proyecto\DataAccess\bin\Debug\net8.0\DataAccess.deps.json
+C:\Users\joako\Downloads\Nueva carpeta (2)\proyecto-anual\proyecto\DataAccess\bin\Debug\net8.0\DataAccess.dll
+C:\Users\joako\Downloads\Nueva carpeta (2)\proyecto-anual\proyecto\DataAccess\bin\Debug\net8.0\DataAccess.pdb
+C:\Users\joako\Downloads\Nueva carpeta (2)\proyecto-anual\proyecto\DataAccess\obj\Debug\net8.0\DataAccess.csproj.AssemblyReference.cache
+C:\Users\joako\Downloads\Nueva carpeta (2)\proyecto-anual\proyecto\DataAccess\obj\Debug\net8.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\joako\Downloads\Nueva carpeta (2)\proyecto-anual\proyecto\DataAccess\obj\Debug\net8.0\DataAccess.AssemblyInfoInputs.cache
+C:\Users\joako\Downloads\Nueva carpeta (2)\proyecto-anual\proyecto\DataAccess\obj\Debug\net8.0\DataAccess.AssemblyInfo.cs
+C:\Users\joako\Downloads\Nueva carpeta (2)\proyecto-anual\proyecto\DataAccess\obj\Debug\net8.0\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\joako\Downloads\Nueva carpeta (2)\proyecto-anual\proyecto\DataAccess\obj\Debug\net8.0\DataAccess.sourcelink.json
+C:\Users\joako\Downloads\Nueva carpeta (2)\proyecto-anual\proyecto\DataAccess\obj\Debug\net8.0\DataAccess.dll
+C:\Users\joako\Downloads\Nueva carpeta (2)\proyecto-anual\proyecto\DataAccess\obj\Debug\net8.0\refint\DataAccess.dll
+C:\Users\joako\Downloads\Nueva carpeta (2)\proyecto-anual\proyecto\DataAccess\obj\Debug\net8.0\DataAccess.pdb
+C:\Users\joako\Downloads\Nueva carpeta (2)\proyecto-anual\proyecto\DataAccess\obj\Debug\net8.0\ref\DataAccess.dll
