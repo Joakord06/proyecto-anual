@@ -69,6 +69,7 @@
             lnkRecuperar.TabIndex = 3;
             lnkRecuperar.TabStop = true;
             lnkRecuperar.Text = "Olvidaste tu contraseña?";
+            lnkRecuperar.LinkClicked += lnkRecuperar_LinkClicked;
             // 
             // lblUsuario
             // 

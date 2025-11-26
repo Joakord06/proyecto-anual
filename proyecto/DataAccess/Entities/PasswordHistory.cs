@@ -6,15 +6,11 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Entities
 {
-    public class User
+    public class PasswordHistory
     {
         public int Id { get; set; }
-        public string Username { get; set; } = null!;
+        public int UserId { get; set; }
         public string PasswordHash { get; set; } = null!;
-        public string? Email { get; set; }
-        public bool IsFirstLogin { get; set; }
-        public string Role { get; set; } = "User";
         public DateTime CreatedAt { get; set; }
     }
 }
-
