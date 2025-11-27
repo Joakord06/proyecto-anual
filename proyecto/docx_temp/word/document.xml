@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main">
+  <w:body>
+    <w:p><w:r><w:t xml:space="preserve">Documento: Diccionario de datos y documentación del proyecto "proyecto"</w:t></w:r></w:p>
+    <w:p><w:r><w:t xml:space="preserve">Fecha: 27-11-2025</w:t></w:r></w:p>
+
+    <w:p><w:r><w:t xml:space="preserve">RESUMEN</w:t></w:r></w:p>
+    <w:p><w:r><w:t xml:space="preserve">Proyecto multi-capa en .NET 8: Presentation (WinForms), BusinessLogic, DataAccess, Services, Session.</w:t></w:r></w:p>
+
+    <w:p><w:r><w:t xml:space="preserve">CONEXIÓN Y SMTP</w:t></w:r></w:p>
+    <w:p><w:r><w:t xml:space="preserve">ConnectionString (appsettings.json): Server=localhost;Database=GestionProyecto;Trusted_Connection=True;TrustServerCertificate=True;</w:t></w:r></w:p>
+    <w:p><w:r><w:t xml:space="preserve">SMTP: smtp.gmail.com, puerto 587, usuario: joakord.emiliano@gmail.com (contraseña en appsettings.json - trátala como secreto).</w:t></w:r></w:p>
+
+    <w:p><w:r><w:t xml:space="preserve">ENTIDADES (DataAccess/Entities)</w:t></w:r></w:p>
+    <w:p><w:r><w:t xml:space="preserve">User (Users): Id (int), Username (string), PasswordHash (string: SHA256 hex de username+password), Email (string?), IsFirstLogin (bool), Role (string), CreatedAt (DateTime).</w:t></w:r></w:p>
+    <w:p><w:r><w:t xml:space="preserve">PasswordHistory: Id, UserId (FK), PasswordHash, CreatedAt.</w:t></w:r></w:p>
+    <w:p><w:r><w:t xml:space="preserve">SecurityQuestion: Id, UserId, Question, AnswerHash (SHA256 de answer.Trim().ToLower()).</w:t></w:r></w:p>
+    <w:p><w:r><w:t xml:space="preserve">SystemConfig: MinPasswordLength, QuestionsToAnswer, RequireUpperLower, RequireDigits, RequireSpecial, Require2FA, DisallowPreviousPasswords, DisallowPersonalData.</w:t></w:r></w:p>
+
+    <w:p><w:r><w:t xml:space="preserve">DTOs (BusinessLogic/Models): UserDto, SecurityQuestionDto, SystemConfigDto. Contienen campos resumen sin PasswordHash.</w:t></w:r></w:p>
+
+    <w:p><w:r><w:t xml:space="preserve">SERVICIOS CLAVE (UserService):</w:t></w:r></w:p>
+    <w:p><w:r><w:t xml:space="preserve">HashUserPassword(username,password): SHA256(UTF8(username+password)) -> hex minúsculas.</w:t></w:r></w:p>
+    <w:p><w:r><w:t xml:space="preserve">HashAnswer(answer): SHA256(answer.Trim().ToLower()) -> hex.</w:t></w:r></w:p>
+    <w:p><w:r><w:t xml:space="preserve">Principales métodos: Login, CreateUserWithQuestions, ResetPasswordBySecurity, ChangePasswordFirstTime, ChangePassword, SaveSecurityQuestions, GetSecurityQuestionsForUser.</w:t></w:r></w:p>
+
+    <w:p><w:r><w:t xml:space="preserve">SCRIPTS DE INICIALIZACIÓN (seed):</w:t></w:r></w:p>
+    <w:p><w:r><w:t xml:space="preserve">Los scripts en Presentation/db_scripts/database_init.sql y Presentation/database_init.sql deben usar HASHBYTES('SHA2_256', 'username' + 'password') y convertir a hex en minúsculas con fn_varbintohexstr + LOWER(...).</w:t></w:r></w:p>
+    <w:p><w:r><w:t xml:space="preserve">Credenciales seeded (cuando se usa username+password): admin / adminAdmin123! , user / userUser123!</w:t></w:r></w:p>
+
+    <w:p><w:r><w:t xml:space="preserve">INSTRUCCIONES RÁPIDAS</w:t></w:r></w:p>
+    <w:p><w:r><w:t xml:space="preserve">Ejecutar seed con sqlcmd (Windows PowerShell):</w:t></w:r></w:p>
+    <w:p><w:r><w:t xml:space="preserve">sqlcmd -S localhost -d GestionProyecto -E -i "C:\ruta\a\proyecto\Presentation\db_scripts\database_init.sql"</w:t></w:r></w:p>
+
+    <w:p><w:r><w:t xml:space="preserve">BUILD y ejecución:</w:t></w:r></w:p>
+    <w:p><w:r><w:t xml:space="preserve">dotnet restore</w:t></w:r></w:p>
+    <w:p><w:r><w:t xml:space="preserve">dotnet build .\Presentation.sln -c Debug</w:t></w:r></w:p>
+
+    <w:p><w:r><w:t xml:space="preserve">PENDIENTES Y RECOMENDACIONES:</w:t></w:r></w:p>
+    <w:p><w:r><w:t xml:space="preserve">- Sincronizar scripts de seed (hecho). - Revisar .gitignore para excluir .vs, bin, obj. - Mover secretos fuera de repo. - Añadir pruebas unitarias para hashing y paridad con SQL.</w:t></w:r></w:p>
+
+    <w:p><w:r><w:t xml:space="preserve">FIN DEL DOCUMENTO.</w:t></w:r></w:p>
+    <w:sectPr/>
+  </w:body>
+</w:document>
