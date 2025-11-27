@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\joako\\Downloads\\Nueva carpeta (2)\\proyecto-anual\\proyecto\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{DCE2B8AB-1951-496D-8307-D5FB2E792D94}|Presentation\\Presentation.csproj|c:\\users\\joako\\downloads\\nueva carpeta (2)\\proyecto-anual\\proyecto\\presentation\\formulariologin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DCE2B8AB-1951-496D-8307-D5FB2E792D94}|Presentation\\Presentation.csproj|solutionrelative:presentation\\formulariologin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{DCE2B8AB-1951-496D-8307-D5FB2E792D94}|Presentation\\Presentation.csproj|c:\\users\\joako\\downloads\\nueva carpeta (2)\\proyecto-anual\\proyecto\\presentation\\formularioconfiguracionadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{DCE2B8AB-1951-496D-8307-D5FB2E792D94}|Presentation\\Presentation.csproj|solutionrelative:presentation\\formularioconfiguracionadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
@@ -22,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,20 +34,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "FormularioLogin.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\joako\\Downloads\\Nueva carpeta (2)\\proyecto-anual\\proyecto\\Presentation\\FormularioLogin.cs",
+              "RelativeDocumentMoniker": "Presentation\\FormularioLogin.cs",
+              "ToolTip": "C:\\Users\\joako\\Downloads\\Nueva carpeta (2)\\proyecto-anual\\proyecto\\Presentation\\FormularioLogin.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Presentation\\FormularioLogin.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T14:46:26.842Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "FormularioConfiguracionAdmin.Designer.cs",
               "DocumentMoniker": "C:\\Users\\joako\\Downloads\\Nueva carpeta (2)\\proyecto-anual\\proyecto\\Presentation\\FormularioConfiguracionAdmin.Designer.cs",
               "RelativeDocumentMoniker": "Presentation\\FormularioConfiguracionAdmin.Designer.cs",
               "ToolTip": "C:\\Users\\joako\\Downloads\\Nueva carpeta (2)\\proyecto-anual\\proyecto\\Presentation\\FormularioConfiguracionAdmin.Designer.cs",
               "RelativeToolTip": "Presentation\\FormularioConfiguracionAdmin.Designer.cs",
-              "ViewState": "AgIAANsAAAAAAAAAAAArwNsAAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAANsAAAAAAAAAAAArwNsAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-27T14:11:25.151Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "FormularioConfiguracionAdmin.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\joako\\Downloads\\Nueva carpeta (2)\\proyecto-anual\\proyecto\\Presentation\\FormularioConfiguracionAdmin.cs",
               "RelativeDocumentMoniker": "Presentation\\FormularioConfiguracionAdmin.cs",
@@ -55,7 +71,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "database_init.sql",
               "DocumentMoniker": "C:\\Users\\joako\\Downloads\\Nueva carpeta (2)\\proyecto-anual\\proyecto\\Presentation\\database_init.sql",
               "RelativeDocumentMoniker": "Presentation\\database_init.sql",

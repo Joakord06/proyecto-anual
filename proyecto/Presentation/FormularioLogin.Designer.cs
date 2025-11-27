@@ -22,10 +22,10 @@
 
         #region Windows Form Designer generated code
 
-        
-        
-        
-        
+
+
+
+
         private void InitializeComponent()
         {
             txtUsuario = new TextBox();
@@ -35,24 +35,24 @@
             lblUsuario = new Label();
             lblPassword = new Label();
             SuspendLayout();
-            
-            
-            
+            // 
+            // txtUsuario
+            // 
             txtUsuario.Location = new Point(12, 72);
             txtUsuario.Name = "txtUsuario";
             txtUsuario.Size = new Size(125, 27);
             txtUsuario.TabIndex = 0;
-            
-            
-            
+            // 
+            // txtPassword
+            // 
             txtPassword.Location = new Point(12, 143);
             txtPassword.Name = "txtPassword";
             txtPassword.Size = new Size(125, 27);
             txtPassword.TabIndex = 1;
             txtPassword.UseSystemPasswordChar = true;
-            
-            
-            
+            // 
+            // btnLogin
+            // 
             btnLogin.Location = new Point(43, 221);
             btnLogin.Name = "btnLogin";
             btnLogin.Size = new Size(94, 29);
@@ -60,37 +60,37 @@
             btnLogin.Text = "Ingresar";
             btnLogin.UseVisualStyleBackColor = true;
             btnLogin.Click += btnLogin_Click;
-            
-            
-            
+            // 
+            // lnkRecuperar
+            // 
             lnkRecuperar.AutoSize = true;
             lnkRecuperar.Location = new Point(12, 173);
             lnkRecuperar.Name = "lnkRecuperar";
             lnkRecuperar.Size = new Size(171, 20);
             lnkRecuperar.TabIndex = 3;
             lnkRecuperar.TabStop = true;
-            lnkRecuperar.Text = "Olvidaste tu contraseÃ±a?";
+            lnkRecuperar.Text = "Olvidaste tu contraseña?";
             lnkRecuperar.LinkClicked += lnkRecuperar_LinkClicked;
-            
-            
-            
+            // 
+            // lblUsuario
+            // 
             lblUsuario.AutoSize = true;
             lblUsuario.Location = new Point(12, 49);
             lblUsuario.Name = "lblUsuario";
             lblUsuario.Size = new Size(59, 20);
             lblUsuario.TabIndex = 4;
             lblUsuario.Text = "Usuario";
-            
-            
-            
+            // 
+            // lblPassword
+            // 
             lblPassword.Location = new Point(12, 117);
             lblPassword.Name = "lblPassword";
             lblPassword.Size = new Size(100, 23);
             lblPassword.TabIndex = 0;
-            lblPassword.Text = "ContraseÃ±a";
-            
-            
-            
+            lblPassword.Text = "Contraseña";
+            // 
+            // Form1
+            // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(601, 450);
@@ -101,8 +101,8 @@
             Controls.Add(txtPassword);
             Controls.Add(txtUsuario);
             Name = "Form1";
-            Text = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
+            Text = "Form1";
             ResumeLayout(false);
             PerformLayout();
         }
