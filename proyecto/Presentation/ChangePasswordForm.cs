@@ -30,13 +30,11 @@ namespace Presentation
             string nuevaPassword = txtNuevaPassword.Text;
             string confirmarPassword = txtConfirmarPassword.Text;
 
-
             if (string.IsNullOrWhiteSpace(usuario) || string.IsNullOrWhiteSpace(nuevaPassword))
             {
                 MessageBox.Show("Complete todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-
 
             if (nuevaPassword != confirmarPassword)
             {
@@ -44,9 +42,8 @@ namespace Presentation
                 return;
             }
 
-
-            bool resultado = _userService.ChangePassword(usuario, nuevaPassword);
-
+            string mensajeError;
+            bool resultado = _userService.ChangePassword(usuario, nuevaPassword, confirmarPassword, out mensajeError);
 
             if (resultado)
             {
@@ -55,7 +52,7 @@ namespace Presentation
             }
             else
             {
-                MessageBox.Show("No se pudo cambiar la contraseña", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(mensajeError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

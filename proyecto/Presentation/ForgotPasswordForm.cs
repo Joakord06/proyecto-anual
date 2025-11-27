@@ -53,9 +53,3 @@ namespace Presentation
         }
     }
 }
-namespace Presentation
-{
-    internal class ForgotPasswordForm
-    {
-    }
-}
