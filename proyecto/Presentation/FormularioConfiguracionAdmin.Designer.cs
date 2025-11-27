@@ -159,6 +159,51 @@ namespace Presentation
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AdminConfigForm";
+            // combo to switch views
+            var cmbView = new ComboBox();
+            cmbView.Name = "cmbView";
+            cmbView.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbView.Items.AddRange(new object[] { "Configuración", "Gestión de usuarios" });
+            cmbView.SelectedIndex = 0;
+            cmbView.Location = new System.Drawing.Point(16, 200);
+            cmbView.Size = new System.Drawing.Size(200, 24);
+            cmbView.SelectedIndexChanged += (s, e) => {
+                // basic handler will be wired in code-behind by looking up control by name
+            };
+            this.Controls.Add(cmbView);
+
+            // panel for user management (hidden by default)
+            var pnlUsers = new Panel();
+            pnlUsers.Name = "pnlUsers";
+            pnlUsers.Location = new System.Drawing.Point(16, 240);
+            pnlUsers.Size = new System.Drawing.Size(440, 260);
+            pnlUsers.Visible = false;
+
+            // DataGridView for users
+            var dgvUsers = new DataGridView();
+            dgvUsers.Name = "dgvUsers";
+            dgvUsers.Location = new System.Drawing.Point(0, 0);
+            dgvUsers.Size = new System.Drawing.Size(440, 180);
+            dgvUsers.ReadOnly = true;
+            dgvUsers.AllowUserToAddRows = false;
+            dgvUsers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            pnlUsers.Controls.Add(dgvUsers);
+
+            // New user controls
+            var lblNewUser = new Label(); lblNewUser.Text = "Crear usuario:"; lblNewUser.Location = new System.Drawing.Point(0, 186);
+            var txtNewUsername = new TextBox(); txtNewUsername.Name = "txtNewUsername"; txtNewUsername.Location = new System.Drawing.Point(0,208); txtNewUsername.Width = 140; txtNewUsername.PlaceholderText = "Usuario";
+            var txtNewEmail = new TextBox(); txtNewEmail.Name = "txtNewEmail"; txtNewEmail.Location = new System.Drawing.Point(150,208); txtNewEmail.Width = 160; txtNewEmail.PlaceholderText = "Email";
+            var txtNewPassword = new TextBox(); txtNewPassword.Name = "txtNewPassword"; txtNewPassword.Location = new System.Drawing.Point(0,240); txtNewPassword.Width = 140; txtNewPassword.UseSystemPasswordChar = true; txtNewPassword.PlaceholderText = "Contraseña";
+            var cmbRole = new ComboBox(); cmbRole.Name = "cmbRole"; cmbRole.Location = new System.Drawing.Point(150,240); cmbRole.Items.AddRange(new object[]{"User","Admin"}); cmbRole.SelectedIndex = 0;
+            var btnCreateUser = new Button(); btnCreateUser.Name = "btnCreateUser"; btnCreateUser.Text = "Crear"; btnCreateUser.Location = new System.Drawing.Point(320, 224); btnCreateUser.Size = new System.Drawing.Size(100,30);
+            pnlUsers.Controls.Add(lblNewUser);
+            pnlUsers.Controls.Add(txtNewUsername);
+            pnlUsers.Controls.Add(txtNewEmail);
+            pnlUsers.Controls.Add(txtNewPassword);
+            pnlUsers.Controls.Add(cmbRole);
+            pnlUsers.Controls.Add(btnCreateUser);
+
+            this.Controls.Add(pnlUsers);
             this.Text = "Configuración del sistema";
             this.StartPosition = FormStartPosition.CenterParent;
             this.grpRules.ResumeLayout(false);
