@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace Presentation
 {
-    partial class ForgotPasswordForm
+    partial class RecuperarContrasenaForm
     {
         private IContainer components = null;
         private TextBox txtUsername;
@@ -77,7 +77,7 @@ namespace Presentation
             this.btnSubmitAnswers.UseVisualStyleBackColor = true;
             this.btnSubmitAnswers.Click += new EventHandler(this.btnSubmitAnswers_Click);
             // 
-            // ForgotPasswordForm
+            // RecuperarContrasenaForm
             // 
             this.ClientSize = new System.Drawing.Size(360, 190);
             this.Controls.Add(this.txtUsername);
@@ -89,7 +89,7 @@ namespace Presentation
             this.FormBorderStyle = FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "ForgotPasswordForm";
+            this.Name = "RecuperarContrasenaForm";
             this.Text = "Recuperar contraseña";
             this.StartPosition = FormStartPosition.CenterParent;
             this.ResumeLayout(false);

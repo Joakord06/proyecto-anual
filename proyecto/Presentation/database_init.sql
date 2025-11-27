@@ -16,7 +16,7 @@ BEGIN
     DECLARE @pwdAdminVarbinary varbinary(32) = HASHBYTES('SHA2_256', 'admin' + 'adminAdmin123!');
     DECLARE @pwdAdminHex varchar(64) = LOWER(SUBSTRING(master.dbo.fn_varbintohexstr(@pwdAdminVarbinary),3,8000));
     INSERT INTO Users (Username, PasswordHash, Email, IsFirstLogin, Role, CreatedAt)
-    VALUES ('admin', @pwdAdminHex, 'admin@example.com', 0, 'Admin', GETDATE());
+    VALUES ('admin', @pwdAdminHex, 'admin@example.com',  0, 'Admin', GETDATE());
     PRINT 'Usuario admin creado.';
 END
 ELSE

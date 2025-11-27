@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lezca\\OneDrive\\Documentos\\GitHub\\proyecto-anual\\proyecto\\DataAccess\\DataAccess.csproj": {}
+    "C:\\Users\\joako\\Downloads\\Nueva carpeta (2)\\proyecto-anual\\proyecto\\DataAccess\\DataAccess.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lezca\\OneDrive\\Documentos\\GitHub\\proyecto-anual\\proyecto\\DataAccess\\DataAccess.csproj": {
+    "C:\\Users\\joako\\Downloads\\Nueva carpeta (2)\\proyecto-anual\\proyecto\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lezca\\OneDrive\\Documentos\\GitHub\\proyecto-anual\\proyecto\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\joako\\Downloads\\Nueva carpeta (2)\\proyecto-anual\\proyecto\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "C:\\Users\\lezca\\OneDrive\\Documentos\\GitHub\\proyecto-anual\\proyecto\\DataAccess\\DataAccess.csproj",
-        "packagesPath": "C:\\Users\\lezca\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lezca\\OneDrive\\Documentos\\GitHub\\proyecto-anual\\proyecto\\DataAccess\\obj\\",
+        "projectPath": "C:\\Users\\joako\\Downloads\\Nueva carpeta (2)\\proyecto-anual\\proyecto\\DataAccess\\DataAccess.csproj",
+        "packagesPath": "C:\\Users\\joako\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\joako\\Downloads\\Nueva carpeta (2)\\proyecto-anual\\proyecto\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\lezca\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\joako\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -43,8 +39,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.300"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -71,7 +66,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

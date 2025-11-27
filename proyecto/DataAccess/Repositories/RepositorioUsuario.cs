@@ -132,6 +132,15 @@ namespace DataAccess.Repositories
             cmd.ExecuteNonQuery();
         }
 
+        public void DeleteSecurityQuestionById(int questionId)
+        {
+            using var conn = new SqlConnection(_connectionString);
+            conn.Open();
+            using var cmd = new SqlCommand("DELETE FROM SecurityQuestions WHERE Id=@id", conn);
+            cmd.Parameters.AddWithValue("@id", questionId);
+            cmd.ExecuteNonQuery();
+        }
+
         public void UpdateUserPasswordHash(int userId, string newHash)
         {
             using var conn = new SqlConnection(_connectionString);

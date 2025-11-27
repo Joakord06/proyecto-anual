@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace Presentation
 {
-    partial class FirstTimeChangePasswordForm
+    partial class PrimerCambioContrasenaForm
     {
         private IContainer components = null;
         private TextBox txtNewPassword;
@@ -71,7 +71,7 @@ namespace Presentation
             this.btnAccept.UseVisualStyleBackColor = true;
             this.btnAccept.Click += new EventHandler(this.btnAccept_Click);
             // 
-            // FirstTimeChangePasswordForm
+            // PrimerCambioContrasenaForm
             // 
             this.ClientSize = new System.Drawing.Size(290, 180);
             this.Controls.Add(this.lblNew);
@@ -82,7 +82,7 @@ namespace Presentation
             this.FormBorderStyle = FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "FirstTimeChangePasswordForm";
+            this.Name = "PrimerCambioContrasenaForm";
             this.Text = "Primer cambio de contraseña";
             this.StartPosition = FormStartPosition.CenterParent;
             this.ResumeLayout(false);

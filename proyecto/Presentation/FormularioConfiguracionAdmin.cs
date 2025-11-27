@@ -14,15 +14,7 @@ namespace Presentation
         private readonly ConfigRepository _cfgRepo = new ConfigRepository();
         private readonly DataAccess.Repositories.UserRepository _userRepo = new DataAccess.Repositories.UserRepository();
 
-        // controls added dynamically in designer
-        private ComboBox cmbView => this.Controls.Find("cmbView", true).FirstOrDefault() as ComboBox;
-        private Panel pnlUsers => this.Controls.Find("pnlUsers", true).FirstOrDefault() as Panel;
-        private DataGridView dgvUsers => pnlUsers?.Controls.Find("dgvUsers", true).FirstOrDefault() as DataGridView;
-        private TextBox txtNewUsername => pnlUsers?.Controls.Find("txtNewUsername", true).FirstOrDefault() as TextBox;
-        private TextBox txtNewEmail => pnlUsers?.Controls.Find("txtNewEmail", true).FirstOrDefault() as TextBox;
-        private TextBox txtNewPassword => pnlUsers?.Controls.Find("txtNewPassword", true).FirstOrDefault() as TextBox;
-        private ComboBox cmbRole => pnlUsers?.Controls.Find("cmbRole", true).FirstOrDefault() as ComboBox;
-        private Button btnCreateUser => pnlUsers?.Controls.Find("btnCreateUser", true).FirstOrDefault() as Button;
+        // designer fields (declared in the Designer partial class)
 
         public AdminConfigForm()
         {
@@ -33,16 +25,112 @@ namespace Presentation
 
         private void WireDynamicControls()
         {
-            if (cmbView != null) cmbView.SelectedIndexChanged += CmbView_SelectedIndexChanged;
+            if (btnNavConfig != null) btnNavConfig.Click += (s, e) => ShowConfig();
+            if (btnNavUsers != null) btnNavUsers.Click += (s, e) => ShowUsers();
             if (btnCreateUser != null) btnCreateUser.Click += BtnCreateUser_Click;
+            // wire selection and question buttons
+            if (dgvUsers != null) dgvUsers.SelectionChanged += (s, e) => LoadQuestionsForSelectedUser();
+            var btnAdd = this.Controls.Find("btnAddQuestion", true).FirstOrDefault() as Button;
+            var btnDel = this.Controls.Find("btnDeleteQuestion", true).FirstOrDefault() as Button;
+            if (btnAdd != null) btnAdd.Click += BtnAddQuestion_Click;
+            if (btnDel != null) btnDel.Click += BtnDeleteQuestion_Click;
         }
 
-        private void CmbView_SelectedIndexChanged(object? sender, EventArgs e)
+        private int? GetSelectedUserId()
         {
-            if (cmbView == null || pnlUsers == null) return;
-            pnlUsers.Visible = cmbView.SelectedIndex == 1; // 0 = Config, 1 = Users
-            // reload users when showing panel
-            if (pnlUsers.Visible) LoadUsers();
+            if (dgvUsers == null) return null;
+            if (dgvUsers.SelectedRows.Count == 0) return null;
+            var row = dgvUsers.SelectedRows[0];
+            if (row.Cells["Id"] == null) return null;
+            return Convert.ToInt32(row.Cells["Id"].Value);
+        }
+
+        private void LoadQuestionsForSelectedUser()
+        {
+            var uid = GetSelectedUserId();
+            var dgvQ = this.Controls.Find("dgvQuestions", true).FirstOrDefault() as DataGridView;
+            if (dgvQ == null) return;
+            dgvQ.DataSource = null;
+            if (uid == null) return;
+            var qlist = _userRepo.GetQuestionsForUser(uid.Value);
+            dgvQ.DataSource = qlist.Select(q => new { q.Id, q.Question }).ToList();
+            dgvQ.AutoResizeColumns();
+        }
+
+        private static string HashAnswerPlain(string answer)
+        {
+            using var sha = System.Security.Cryptography.SHA256.Create();
+            var bytes = sha.ComputeHash(System.Text.Encoding.UTF8.GetBytes(answer.Trim().ToLower()));
+            var sb = new System.Text.StringBuilder();
+            foreach (var b in bytes) sb.Append(b.ToString("x2"));
+            return sb.ToString();
+        }
+
+        private void BtnAddQuestion_Click(object? sender, EventArgs e)
+        {
+            var uid = GetSelectedUserId();
+            if (uid == null) { MessageBox.Show("Seleccione un usuario primero."); return; }
+            var txtQ = this.Controls.Find("txtNewQuestion", true).FirstOrDefault() as TextBox;
+            var txtA = this.Controls.Find("txtNewAnswer", true).FirstOrDefault() as TextBox;
+            if (txtQ == null || txtA == null) return;
+            var q = txtQ.Text?.Trim();
+            var a = txtA.Text ?? string.Empty;
+            if (string.IsNullOrWhiteSpace(q) || string.IsNullOrWhiteSpace(a)) { MessageBox.Show("Pregunta y respuesta son obligatorias."); return; }
+            var ah = HashAnswerPlain(a);
+            try
+            {
+                _userRepo.AddSecurityQuestion(uid.Value, q, ah);
+                MessageBox.Show("Pregunta agregada.");
+                txtQ.Text = "";
+                txtA.Text = "";
+                LoadQuestionsForSelectedUser();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error agregando pregunta: {ex.Message}");
+            }
+        }
+
+        private void BtnDeleteQuestion_Click(object? sender, EventArgs e)
+        {
+            var uid = GetSelectedUserId();
+            if (uid == null) { MessageBox.Show("Seleccione un usuario primero."); return; }
+            var dgvQ = this.Controls.Find("dgvQuestions", true).FirstOrDefault() as DataGridView;
+            if (dgvQ == null || dgvQ.SelectedRows.Count == 0) { MessageBox.Show("Seleccione una pregunta para eliminar."); return; }
+            var idObj = dgvQ.SelectedRows[0].Cells["Id"].Value;
+            if (idObj == null) { MessageBox.Show("No se pudo determinar la pregunta seleccionada."); return; }
+            int qid = Convert.ToInt32(idObj);
+            try
+            {
+                _userRepo.DeleteSecurityQuestionById(qid);
+                MessageBox.Show("Pregunta eliminada.");
+                LoadQuestionsForSelectedUser();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error eliminando pregunta: {ex.Message}");
+            }
+        }
+
+        private void ShowConfig()
+        {
+            if (pnlUsers != null)
+            {
+                pnlUsers.Visible = false;
+            }
+            this.grpRules.Visible = true;
+            // ensure config controls are on top
+            this.grpRules.BringToFront();
+        }
+
+        private void ShowUsers()
+        {
+            if (pnlUsers == null) return;
+            // hide config and show users panel, bring it to front to avoid overlap
+            this.grpRules.Visible = false;
+            pnlUsers.Visible = true;
+            pnlUsers.BringToFront();
+            LoadUsers();
         }
 
         private void LoadUsers()

@@ -31,187 +31,360 @@ namespace Presentation
 
         private void InitializeComponent()
         {
-            this.components = new Container();
-            this.lblMinLength = new Label();
-            this.numMinLength = new NumericUpDown();
-            this.lblQuestions = new Label();
-            this.numQuestions = new NumericUpDown();
-            this.grpRules = new GroupBox();
-            this.chkUpperLower = new CheckBox();
-            this.chkDigits = new CheckBox();
-            this.chkSpecial = new CheckBox();
-            this.chkDisallowPrev = new CheckBox();
-            this.chkDisallowPersonal = new CheckBox();
-            this.btnSave = new Button();
-            this.btnCancel = new Button();
-            ((ISupportInitialize)(this.numMinLength)).BeginInit();
-            ((ISupportInitialize)(this.numQuestions)).BeginInit();
-            this.grpRules.SuspendLayout();
-            this.SuspendLayout();
+            lblMinLength = new Label();
+            numMinLength = new NumericUpDown();
+            lblQuestions = new Label();
+            numQuestions = new NumericUpDown();
+            grpRules = new GroupBox();
+            chkUpperLower = new CheckBox();
+            chkDigits = new CheckBox();
+            chkSpecial = new CheckBox();
+            chkDisallowPrev = new CheckBox();
+            chkDisallowPersonal = new CheckBox();
+            btnSave = new Button();
+            btnCancel = new Button();
+            pnlNav = new Panel();
+            btnNavConfig = new Button();
+            btnNavUsers = new Button();
+            pnlContent = new Panel();
+            pnlUsers = new Panel();
+            dgvUsers = new DataGridView();
+            lblNewUser = new Label();
+            txtNewUsername = new TextBox();
+            txtNewEmail = new TextBox();
+            txtNewPassword = new TextBox();
+            cmbRole = new ComboBox();
+            btnCreateUser = new Button();
+            ((ISupportInitialize)numMinLength).BeginInit();
+            ((ISupportInitialize)numQuestions).BeginInit();
+            grpRules.SuspendLayout();
+            pnlNav.SuspendLayout();
+            pnlContent.SuspendLayout();
+            pnlUsers.SuspendLayout();
+            ((ISupportInitialize)dgvUsers).BeginInit();
+            SuspendLayout();
+            // 
+            // lblMinLength
+            // 
+            lblMinLength.AutoSize = true;
+            lblMinLength.Location = new Point(12, 12);
+            lblMinLength.Name = "lblMinLength";
+            lblMinLength.Size = new Size(222, 20);
+            lblMinLength.TabIndex = 0;
+            lblMinLength.Text = "Longitud mínima de contraseña:";
             // 
             // numMinLength
             // 
-            this.lblMinLength.AutoSize = true;
-            this.lblMinLength.Location = new System.Drawing.Point(16, 16);
-            this.lblMinLength.Name = "lblMinLength";
-            this.lblMinLength.Size = new System.Drawing.Size(180, 15);
-            this.lblMinLength.Text = "Longitud mínima de contraseña:";
-
-            this.numMinLength.Location = new System.Drawing.Point(220, 12);
-            this.numMinLength.Minimum = 1;
-            this.numMinLength.Maximum = 128;
-            this.numMinLength.Name = "numMinLength";
-            this.numMinLength.Size = new System.Drawing.Size(80, 23);
+            numMinLength.Location = new Point(240, 12);
+            numMinLength.Maximum = new decimal(new int[] { 128, 0, 0, 0 });
+            numMinLength.Minimum = new decimal(new int[] { 1, 0, 0, 0 });
+            numMinLength.Name = "numMinLength";
+            numMinLength.Size = new Size(80, 27);
+            numMinLength.TabIndex = 1;
+            numMinLength.Value = new decimal(new int[] { 1, 0, 0, 0 });
+            // 
+            // lblQuestions
+            // 
+            lblQuestions.AutoSize = true;
+            lblQuestions.Location = new Point(12, 52);
+            lblQuestions.Name = "lblQuestions";
+            lblQuestions.Size = new Size(151, 20);
+            lblQuestions.TabIndex = 2;
+            lblQuestions.Text = "Preguntas requeridas:";
             // 
             // numQuestions
             // 
-            this.lblQuestions.AutoSize = true;
-            this.lblQuestions.Location = new System.Drawing.Point(16, 52);
-            this.lblQuestions.Name = "lblQuestions";
-            this.lblQuestions.Size = new System.Drawing.Size(140, 15);
-            this.lblQuestions.Text = "Preguntas requeridas:";
-
-            this.numQuestions.Location = new System.Drawing.Point(220, 48);
-            this.numQuestions.Minimum = 0;
-            this.numQuestions.Maximum = 10;
-            this.numQuestions.Name = "numQuestions";
-            this.numQuestions.Size = new System.Drawing.Size(80, 23);
+            numQuestions.Location = new Point(240, 48);
+            numQuestions.Maximum = new decimal(new int[] { 10, 0, 0, 0 });
+            numQuestions.Name = "numQuestions";
+            numQuestions.Size = new Size(80, 27);
+            numQuestions.TabIndex = 3;
+            // 
+            // grpRules
+            // 
+            grpRules.Controls.Add(chkUpperLower);
+            grpRules.Controls.Add(chkDigits);
+            grpRules.Controls.Add(chkSpecial);
+            grpRules.Controls.Add(chkDisallowPrev);
+            grpRules.Controls.Add(chkDisallowPersonal);
+            grpRules.Location = new Point(12, 92);
+            grpRules.Name = "grpRules";
+            grpRules.Size = new Size(436, 140);
+            grpRules.TabIndex = 4;
+            grpRules.TabStop = false;
+            grpRules.Text = "Reglas de contraseña";
             // 
             // chkUpperLower
             // 
-            this.grpRules.Location = new System.Drawing.Point(16, 88);
-            this.grpRules.Name = "grpRules";
-            this.grpRules.Size = new System.Drawing.Size(360, 120);
-            this.grpRules.Text = "Reglas de contraseña";
-
-            this.chkUpperLower.AutoSize = true;
-            this.chkUpperLower.Location = new System.Drawing.Point(12, 22);
-            this.chkUpperLower.Name = "chkUpperLower";
-            this.chkUpperLower.Size = new System.Drawing.Size(160, 19);
-            this.chkUpperLower.Text = "Requerir mayúsculas/minúsculas";
+            chkUpperLower.AutoSize = true;
+            chkUpperLower.Location = new Point(12, 22);
+            chkUpperLower.Name = "chkUpperLower";
+            chkUpperLower.Size = new Size(244, 24);
+            chkUpperLower.TabIndex = 0;
+            chkUpperLower.Text = "Requerir mayúsculas/minúsculas";
             // 
             // chkDigits
             // 
-            this.chkDigits.AutoSize = true;
-            this.chkDigits.Location = new System.Drawing.Point(12, 46);
-            this.chkDigits.Name = "chkDigits";
-            this.chkDigits.Size = new System.Drawing.Size(97, 19);
-            this.chkDigits.Text = "Requerir dígitos";
+            chkDigits.AutoSize = true;
+            chkDigits.Location = new Point(12, 46);
+            chkDigits.Name = "chkDigits";
+            chkDigits.Size = new Size(137, 24);
+            chkDigits.TabIndex = 1;
+            chkDigits.Text = "Requerir dígitos";
             // 
             // chkSpecial
             // 
-            this.chkSpecial.AutoSize = true;
-            this.chkSpecial.Location = new System.Drawing.Point(12, 70);
-            this.chkSpecial.Name = "chkSpecial";
-            this.chkSpecial.Size = new System.Drawing.Size(160, 19);
-            this.chkSpecial.Text = "Requerir caracteres especiales";
+            chkSpecial.AutoSize = true;
+            chkSpecial.Location = new Point(12, 70);
+            chkSpecial.Name = "chkSpecial";
+            chkSpecial.Size = new Size(230, 24);
+            chkSpecial.TabIndex = 2;
+            chkSpecial.Text = "Requerir caracteres especiales";
             // 
             // chkDisallowPrev
             // 
-            this.chkDisallowPrev.AutoSize = true;
-            this.chkDisallowPrev.Location = new System.Drawing.Point(12, 94);
-            this.chkDisallowPrev.Name = "chkDisallowPrev";
-            this.chkDisallowPrev.Size = new System.Drawing.Size(190, 19);
-            this.chkDisallowPrev.Text = "Prohibir contraseñas previas";
+            chkDisallowPrev.AutoSize = true;
+            chkDisallowPrev.Location = new Point(12, 94);
+            chkDisallowPrev.Name = "chkDisallowPrev";
+            chkDisallowPrev.Size = new Size(216, 24);
+            chkDisallowPrev.TabIndex = 3;
+            chkDisallowPrev.Text = "Prohibir contraseñas previas";
             // 
             // chkDisallowPersonal
             // 
-            this.chkDisallowPersonal.AutoSize = true;
-            this.chkDisallowPersonal.Location = new System.Drawing.Point(12, 116);
-            this.chkDisallowPersonal.Name = "chkDisallowPersonal";
-            this.chkDisallowPersonal.Size = new System.Drawing.Size(180, 19);
-            this.chkDisallowPersonal.Text = "Prohibir uso de datos personales";
+            chkDisallowPersonal.AutoSize = true;
+            chkDisallowPersonal.Location = new Point(12, 116);
+            chkDisallowPersonal.Name = "chkDisallowPersonal";
+            chkDisallowPersonal.Size = new Size(247, 24);
+            chkDisallowPersonal.TabIndex = 4;
+            chkDisallowPersonal.Text = "Prohibir uso de datos personales";
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(276, 220);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(100, 30);
-            this.btnSave.Text = "Guardar";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new EventHandler(this.btnSave_Click);
-
-            this.btnCancel.Location = new System.Drawing.Point(356, 220);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(100, 30);
-            this.btnCancel.Text = "Cancelar";
-            this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.DialogResult = DialogResult.Cancel;
+            btnSave.Location = new Point(253, 274);
+            btnSave.Name = "btnSave";
+            btnSave.Size = new Size(100, 30);
+            btnSave.TabIndex = 5;
+            btnSave.Text = "Guardar";
+            btnSave.UseVisualStyleBackColor = true;
+            btnSave.Click += btnSave_Click;
             // 
-            // AdminConfigForm
+            // btnCancel
             // 
-            // add checkboxes into groupbox
-            this.grpRules.Controls.Add(this.chkUpperLower);
-            this.grpRules.Controls.Add(this.chkDigits);
-            this.grpRules.Controls.Add(this.chkSpecial);
-            this.grpRules.Controls.Add(this.chkDisallowPrev);
-            this.grpRules.Controls.Add(this.chkDisallowPersonal);
-
-            this.ClientSize = new System.Drawing.Size(480, 265);
-            this.Controls.Add(this.lblMinLength);
-            this.Controls.Add(this.numMinLength);
-            this.Controls.Add(this.lblQuestions);
-            this.Controls.Add(this.numQuestions);
-            this.Controls.Add(this.grpRules);
-            this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.btnCancel);
-            this.FormBorderStyle = FormBorderStyle.FixedDialog;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "AdminConfigForm";
-            // combo to switch views
-            var cmbView = new ComboBox();
-            cmbView.Name = "cmbView";
-            cmbView.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbView.Items.AddRange(new object[] { "Configuración", "Gestión de usuarios" });
-            cmbView.SelectedIndex = 0;
-            cmbView.Location = new System.Drawing.Point(16, 200);
-            cmbView.Size = new System.Drawing.Size(200, 24);
-            cmbView.SelectedIndexChanged += (s, e) => {
-                // basic handler will be wired in code-behind by looking up control by name
-            };
-            this.Controls.Add(cmbView);
-
-            // panel for user management (hidden by default)
-            var pnlUsers = new Panel();
-            pnlUsers.Name = "pnlUsers";
-            pnlUsers.Location = new System.Drawing.Point(16, 240);
-            pnlUsers.Size = new System.Drawing.Size(440, 260);
-            pnlUsers.Visible = false;
-
-            // DataGridView for users
-            var dgvUsers = new DataGridView();
-            dgvUsers.Name = "dgvUsers";
-            dgvUsers.Location = new System.Drawing.Point(0, 0);
-            dgvUsers.Size = new System.Drawing.Size(440, 180);
-            dgvUsers.ReadOnly = true;
-            dgvUsers.AllowUserToAddRows = false;
-            dgvUsers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            btnCancel.DialogResult = DialogResult.Cancel;
+            btnCancel.Location = new Point(357, 274);
+            btnCancel.Name = "btnCancel";
+            btnCancel.Size = new Size(100, 30);
+            btnCancel.TabIndex = 6;
+            btnCancel.Text = "Cancelar";
+            btnCancel.UseVisualStyleBackColor = true;
+            // 
+            // pnlNav
+            // 
+            pnlNav.Controls.Add(btnNavConfig);
+            pnlNav.Controls.Add(btnNavUsers);
+            pnlNav.Location = new Point(12, 12);
+            pnlNav.Name = "pnlNav";
+            pnlNav.Size = new Size(200, 480);
+            pnlNav.TabIndex = 0;
+            // 
+            // btnNavConfig
+            // 
+            btnNavConfig.Location = new Point(12, 16);
+            btnNavConfig.Name = "btnNavConfig";
+            btnNavConfig.Size = new Size(176, 36);
+            btnNavConfig.TabIndex = 0;
+            btnNavConfig.Text = "Configuración";
+            // 
+            // btnNavUsers
+            // 
+            btnNavUsers.Location = new Point(12, 64);
+            btnNavUsers.Name = "btnNavUsers";
+            btnNavUsers.Size = new Size(176, 36);
+            btnNavUsers.TabIndex = 1;
+            btnNavUsers.Text = "Gestión de usuarios";
+            // 
+            // pnlContent
+            // 
+            pnlContent.Controls.Add(lblMinLength);
+            pnlContent.Controls.Add(numMinLength);
+            pnlContent.Controls.Add(lblQuestions);
+            pnlContent.Controls.Add(numQuestions);
+            pnlContent.Controls.Add(grpRules);
+            pnlContent.Controls.Add(pnlUsers);
+            pnlContent.Location = new Point(220, 12);
+            pnlContent.Name = "pnlContent";
+            pnlContent.Size = new Size(460, 480);
+            pnlContent.TabIndex = 1;
+            // 
+            // pnlUsers
+            // 
             pnlUsers.Controls.Add(dgvUsers);
-
-            // New user controls
-            var lblNewUser = new Label(); lblNewUser.Text = "Crear usuario:"; lblNewUser.Location = new System.Drawing.Point(0, 186);
-            var txtNewUsername = new TextBox(); txtNewUsername.Name = "txtNewUsername"; txtNewUsername.Location = new System.Drawing.Point(0,208); txtNewUsername.Width = 140; txtNewUsername.PlaceholderText = "Usuario";
-            var txtNewEmail = new TextBox(); txtNewEmail.Name = "txtNewEmail"; txtNewEmail.Location = new System.Drawing.Point(150,208); txtNewEmail.Width = 160; txtNewEmail.PlaceholderText = "Email";
-            var txtNewPassword = new TextBox(); txtNewPassword.Name = "txtNewPassword"; txtNewPassword.Location = new System.Drawing.Point(0,240); txtNewPassword.Width = 140; txtNewPassword.UseSystemPasswordChar = true; txtNewPassword.PlaceholderText = "Contraseña";
-            var cmbRole = new ComboBox(); cmbRole.Name = "cmbRole"; cmbRole.Location = new System.Drawing.Point(150,240); cmbRole.Items.AddRange(new object[]{"User","Admin"}); cmbRole.SelectedIndex = 0;
-            var btnCreateUser = new Button(); btnCreateUser.Name = "btnCreateUser"; btnCreateUser.Text = "Crear"; btnCreateUser.Location = new System.Drawing.Point(320, 224); btnCreateUser.Size = new System.Drawing.Size(100,30);
             pnlUsers.Controls.Add(lblNewUser);
             pnlUsers.Controls.Add(txtNewUsername);
             pnlUsers.Controls.Add(txtNewEmail);
             pnlUsers.Controls.Add(txtNewPassword);
+            pnlUsers.Controls.Add(btnCancel);
+            pnlUsers.Controls.Add(btnSave);
             pnlUsers.Controls.Add(cmbRole);
             pnlUsers.Controls.Add(btnCreateUser);
+            pnlUsers.Dock = DockStyle.Fill;
+            pnlUsers.Location = new Point(0, 0);
+            pnlUsers.Name = "pnlUsers";
+            pnlUsers.Size = new Size(460, 480);
+            pnlUsers.TabIndex = 7;
+            pnlUsers.Visible = false;
+            // 
+            // dgvUsers
+            // 
+            dgvUsers.AllowUserToAddRows = false;
+            dgvUsers.ColumnHeadersHeight = 29;
+            dgvUsers.Dock = DockStyle.Top;
+            dgvUsers.Location = new Point(0, 0);
+            dgvUsers.Name = "dgvUsers";
+            dgvUsers.ReadOnly = true;
+            dgvUsers.RowHeadersWidth = 51;
+            dgvUsers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvUsers.Size = new Size(460, 200);
+            dgvUsers.TabIndex = 0;
+            // 
+            // dgvQuestions (lista de preguntas de seguridad)
+            // 
+            var dgvQuestions = new DataGridView();
+            dgvQuestions.Name = "dgvQuestions";
+            dgvQuestions.Dock = DockStyle.Bottom;
+            dgvQuestions.Height = 140;
+            dgvQuestions.ReadOnly = true;
+            dgvQuestions.AllowUserToAddRows = false;
+            dgvQuestions.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            pnlUsers.Controls.Add(dgvQuestions);
+            // 
+            // lblNewUser
+            // 
+            lblNewUser.Location = new Point(0, 186);
+            lblNewUser.Name = "lblNewUser";
+            lblNewUser.Size = new Size(100, 23);
+            lblNewUser.TabIndex = 1;
+            lblNewUser.Text = "Crear usuario:";
+            // 
+            // lblQuestion
+            // 
+            var lblQuestion = new Label();
+            lblQuestion.Location = new Point(0, 320);
+            lblQuestion.Name = "lblQuestion";
+            lblQuestion.Size = new Size(140, 23);
+            lblQuestion.Text = "Pregunta:";
+            pnlUsers.Controls.Add(lblQuestion);
 
-            this.Controls.Add(pnlUsers);
-            this.Text = "Configuración del sistema";
-            this.StartPosition = FormStartPosition.CenterParent;
-            this.grpRules.ResumeLayout(false);
-            this.grpRules.PerformLayout();
-            ((ISupportInitialize)(this.numMinLength)).EndInit();
-            ((ISupportInitialize)(this.numQuestions)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            var txtNewQuestion = new TextBox();
+            txtNewQuestion.Name = "txtNewQuestion";
+            txtNewQuestion.Location = new Point(0, 344);
+            txtNewQuestion.Size = new Size(260, 27);
+            pnlUsers.Controls.Add(txtNewQuestion);
+
+            var lblAnswer = new Label();
+            lblAnswer.Location = new Point(0, 376);
+            lblAnswer.Name = "lblAnswer";
+            lblAnswer.Size = new Size(140, 23);
+            lblAnswer.Text = "Respuesta (visible):";
+            pnlUsers.Controls.Add(lblAnswer);
+
+            var txtNewAnswer = new TextBox();
+            txtNewAnswer.Name = "txtNewAnswer";
+            txtNewAnswer.Location = new Point(0, 400);
+            txtNewAnswer.Size = new Size(260, 27);
+            pnlUsers.Controls.Add(txtNewAnswer);
+
+            var btnAddQuestion = new Button();
+            btnAddQuestion.Name = "btnAddQuestion";
+            btnAddQuestion.Text = "Agregar pregunta";
+            btnAddQuestion.Location = new Point(280, 344);
+            btnAddQuestion.Size = new Size(140, 30);
+            pnlUsers.Controls.Add(btnAddQuestion);
+
+            var btnDeleteQuestion = new Button();
+            btnDeleteQuestion.Name = "btnDeleteQuestion";
+            btnDeleteQuestion.Text = "Eliminar pregunta";
+            btnDeleteQuestion.Location = new Point(280, 384);
+            btnDeleteQuestion.Size = new Size(140, 30);
+            pnlUsers.Controls.Add(btnDeleteQuestion);
+            // 
+            // txtNewUsername
+            // 
+            txtNewUsername.Location = new Point(0, 208);
+            txtNewUsername.Name = "txtNewUsername";
+            txtNewUsername.PlaceholderText = "Usuario";
+            txtNewUsername.Size = new Size(140, 27);
+            txtNewUsername.TabIndex = 2;
+            // 
+            // txtNewEmail
+            // 
+            txtNewEmail.Location = new Point(150, 208);
+            txtNewEmail.Name = "txtNewEmail";
+            txtNewEmail.PlaceholderText = "Email";
+            txtNewEmail.Size = new Size(160, 27);
+            txtNewEmail.TabIndex = 3;
+            // 
+            // txtNewPassword
+            // 
+            txtNewPassword.Location = new Point(0, 240);
+            txtNewPassword.Name = "txtNewPassword";
+            txtNewPassword.PlaceholderText = "Contraseña";
+            txtNewPassword.Size = new Size(140, 27);
+            txtNewPassword.TabIndex = 4;
+            txtNewPassword.UseSystemPasswordChar = true;
+            // 
+            // cmbRole
+            // 
+            cmbRole.Items.AddRange(new object[] { "User", "Admin" });
+            cmbRole.Location = new Point(150, 240);
+            cmbRole.Name = "cmbRole";
+            cmbRole.Size = new Size(121, 28);
+            cmbRole.TabIndex = 5;
+            // 
+            // btnCreateUser
+            // 
+            btnCreateUser.Location = new Point(140, 287);
+            btnCreateUser.Name = "btnCreateUser";
+            btnCreateUser.Size = new Size(100, 30);
+            btnCreateUser.TabIndex = 6;
+            btnCreateUser.Text = "Crear";
+            // 
+            // AdminConfigForm
+            // 
+            ClientSize = new Size(700, 520);
+            Controls.Add(pnlNav);
+            Controls.Add(pnlContent);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            MaximizeBox = false;
+            MinimizeBox = false;
+            Name = "AdminConfigForm";
+            StartPosition = FormStartPosition.CenterParent;
+            Text = "Configuración del sistema";
+            ((ISupportInitialize)numMinLength).EndInit();
+            ((ISupportInitialize)numQuestions).EndInit();
+            grpRules.ResumeLayout(false);
+            grpRules.PerformLayout();
+            pnlNav.ResumeLayout(false);
+            pnlContent.ResumeLayout(false);
+            pnlContent.PerformLayout();
+            pnlUsers.ResumeLayout(false);
+            pnlUsers.PerformLayout();
+            ((ISupportInitialize)dgvUsers).EndInit();
+            ResumeLayout(false);
         }
+
+        private Panel pnlNav;
+        private Button btnNavConfig;
+        private Button btnNavUsers;
+        private Panel pnlContent;
+        private Panel pnlUsers;
+        private DataGridView dgvUsers;
+        private Label lblNewUser;
+        private TextBox txtNewUsername;
+        private TextBox txtNewEmail;
+        private TextBox txtNewPassword;
+        private ComboBox cmbRole;
+        private Button btnCreateUser;
     }
 }

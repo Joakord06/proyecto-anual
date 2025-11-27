@@ -1,0 +1,13 @@
+C:\Users\joako\Downloads\Nueva carpeta (2)\proyecto-anual\proyecto\Session\bin\Debug\net8.0\Session.deps.json
+C:\Users\joako\Downloads\Nueva carpeta (2)\proyecto-anual\proyecto\Session\bin\Debug\net8.0\Session.dll
+C:\Users\joako\Downloads\Nueva carpeta (2)\proyecto-anual\proyecto\Session\bin\Debug\net8.0\Session.pdb
+C:\Users\joako\Downloads\Nueva carpeta (2)\proyecto-anual\proyecto\Session\obj\Debug\net8.0\Session.csproj.AssemblyReference.cache
+C:\Users\joako\Downloads\Nueva carpeta (2)\proyecto-anual\proyecto\Session\obj\Debug\net8.0\Session.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\joako\Downloads\Nueva carpeta (2)\proyecto-anual\proyecto\Session\obj\Debug\net8.0\Session.AssemblyInfoInputs.cache
+C:\Users\joako\Downloads\Nueva carpeta (2)\proyecto-anual\proyecto\Session\obj\Debug\net8.0\Session.AssemblyInfo.cs
+C:\Users\joako\Downloads\Nueva carpeta (2)\proyecto-anual\proyecto\Session\obj\Debug\net8.0\Session.csproj.CoreCompileInputs.cache
+C:\Users\joako\Downloads\Nueva carpeta (2)\proyecto-anual\proyecto\Session\obj\Debug\net8.0\Session.sourcelink.json
+C:\Users\joako\Downloads\Nueva carpeta (2)\proyecto-anual\proyecto\Session\obj\Debug\net8.0\Session.dll
+C:\Users\joako\Downloads\Nueva carpeta (2)\proyecto-anual\proyecto\Session\obj\Debug\net8.0\refint\Session.dll
+C:\Users\joako\Downloads\Nueva carpeta (2)\proyecto-anual\proyecto\Session\obj\Debug\net8.0\Session.pdb
+C:\Users\joako\Downloads\Nueva carpeta (2)\proyecto-anual\proyecto\Session\obj\Debug\net8.0\ref\Session.dll
