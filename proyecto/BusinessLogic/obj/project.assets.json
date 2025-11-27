@@ -1632,19 +1632,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\joako\\.nuget\\packages\\": {}
+    "C:\\Users\\lezca\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\joako\\Downloads\\Nueva carpeta (2)\\proyecto-anual\\proyecto\\BusinessLogic\\BusinessLogic.csproj",
+      "projectUniqueName": "C:\\Users\\lezca\\OneDrive\\Documentos\\GitHub\\proyecto-anual\\proyecto\\BusinessLogic\\BusinessLogic.csproj",
       "projectName": "BusinessLogic",
-      "projectPath": "C:\\Users\\joako\\Downloads\\Nueva carpeta (2)\\proyecto-anual\\proyecto\\BusinessLogic\\BusinessLogic.csproj",
-      "packagesPath": "C:\\Users\\joako\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\joako\\Downloads\\Nueva carpeta (2)\\proyecto-anual\\proyecto\\BusinessLogic\\obj\\",
+      "projectPath": "C:\\Users\\lezca\\OneDrive\\Documentos\\GitHub\\proyecto-anual\\proyecto\\BusinessLogic\\BusinessLogic.csproj",
+      "packagesPath": "C:\\Users\\lezca\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\lezca\\OneDrive\\Documentos\\GitHub\\proyecto-anual\\proyecto\\BusinessLogic\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\joako\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\lezca\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1658,11 +1663,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\joako\\Downloads\\Nueva carpeta (2)\\proyecto-anual\\proyecto\\DataAccess\\DataAccess.csproj": {
-              "projectPath": "C:\\Users\\joako\\Downloads\\Nueva carpeta (2)\\proyecto-anual\\proyecto\\DataAccess\\DataAccess.csproj"
+            "C:\\Users\\lezca\\OneDrive\\Documentos\\GitHub\\proyecto-anual\\proyecto\\DataAccess\\DataAccess.csproj": {
+              "projectPath": "C:\\Users\\lezca\\OneDrive\\Documentos\\GitHub\\proyecto-anual\\proyecto\\DataAccess\\DataAccess.csproj"
             },
-            "C:\\Users\\joako\\Downloads\\Nueva carpeta (2)\\proyecto-anual\\proyecto\\Services\\Services.csproj": {
-              "projectPath": "C:\\Users\\joako\\Downloads\\Nueva carpeta (2)\\proyecto-anual\\proyecto\\Services\\Services.csproj"
+            "C:\\Users\\lezca\\OneDrive\\Documentos\\GitHub\\proyecto-anual\\proyecto\\Services\\Services.csproj": {
+              "projectPath": "C:\\Users\\lezca\\OneDrive\\Documentos\\GitHub\\proyecto-anual\\proyecto\\Services\\Services.csproj"
             }
           }
         }
@@ -1676,7 +1681,8 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      }
+      },
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net8.0": {
@@ -1697,7 +1703,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

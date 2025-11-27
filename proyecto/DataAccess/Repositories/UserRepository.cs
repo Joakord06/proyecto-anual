@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using Microsoft.Data.SqlClient;
 using DataAccess.Entities;
+using DataAccess.Helpers;
 
 
 namespace DataAccess.Repositories
 {
     public class UserRepository
     {
-        private readonly string _connectionString = @"Server=localhost;Database=GestionProyecto;Trusted_Connection=True;TrustServerCertificate=True;";
+        private readonly string _connectionString = ConfigProvider.GetConnectionString("GestionProyecto");
 
         public User? GetUserById(int id)
         {

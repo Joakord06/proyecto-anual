@@ -5,12 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Data.SqlClient;
 using DataAccess.Entities;
+using DataAccess.Helpers;
 
 namespace DataAccess.Repositories
 {
     public class ConfigRepository
     {
-        private readonly string _connectionString = @"Server=localhost;Database=GestionProyecto;Trusted_Connection=True;TrustServerCertificate=True;";
+        private readonly string _connectionString = ConfigProvider.GetConnectionString("GestionProyecto");
 
         public SystemConfig GetConfig()
         {
