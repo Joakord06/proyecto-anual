@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 
 namespace LayeredApp.Business.DTOs
 {
@@ -12,3 +12,4 @@ namespace LayeredApp.Business.DTOs
         public DateTime CreatedAt { get; set; }
     }
 }
+

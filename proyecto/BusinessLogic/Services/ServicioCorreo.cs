@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,13 +19,13 @@ namespace LayeredApp.Business.Services
 
         public EmailService()
         {
-            // Try environment variables first
+            
             _host = Environment.GetEnvironmentVariable("SMTP_HOST") ?? string.Empty;
             _user = Environment.GetEnvironmentVariable("SMTP_USER") ?? string.Empty;
             _pass = Environment.GetEnvironmentVariable("SMTP_PASS") ?? string.Empty;
             int.TryParse(Environment.GetEnvironmentVariable("SMTP_PORT"), out _port);
 
-            // If any are missing, try reading appsettings.json from application base
+            
             if (string.IsNullOrWhiteSpace(_host) || string.IsNullOrWhiteSpace(_user) || string.IsNullOrWhiteSpace(_pass) || _port == 0)
             {
                 try
@@ -47,11 +47,11 @@ namespace LayeredApp.Business.Services
                             if (_port == 0 && smtp.TryGetProperty("Port", out var p) && p.TryGetInt32(out var pi)) _port = pi;
                             if (string.IsNullOrWhiteSpace(_user) && smtp.TryGetProperty("User", out var u)) _user = u.GetString() ?? _user;
                             if (string.IsNullOrWhiteSpace(_pass) && smtp.TryGetProperty("Pass", out var pw)) _pass = pw.GetString() ?? _pass;
-                            // allow an optional UseSsl flag
+                            
                         }
                     }
                 }
-                catch { /* ignore, fallback to env/empty */ }
+                catch {  }
             }
             
             if (_port == 0) _port = 587;
@@ -72,3 +72,4 @@ namespace LayeredApp.Business.Services
         }
     }
 }
+

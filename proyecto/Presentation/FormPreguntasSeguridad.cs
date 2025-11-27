@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 using LayeredApp.Business.Services;
@@ -32,7 +32,7 @@ namespace Presentation
                     txtQ2.Text = qs[1].Question;
                 }
             }
-            catch { /* ignore */ }
+            catch {  }
         }
 
         private void BtnSave_Click(object? sender, EventArgs e)
@@ -62,3 +62,4 @@ namespace Presentation
         }
     }
 }
+

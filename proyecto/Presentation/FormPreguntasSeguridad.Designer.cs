@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -45,7 +45,7 @@ namespace Presentation
             this.FormBorderStyle = FormBorderStyle.FixedDialog;
             this.StartPosition = FormStartPosition.CenterParent;
 
-            this.lblInfo.Text = "Configura tus preguntas de seguridad (serán usadas para recuperar contraseña).";
+            this.lblInfo.Text = "Configura tus preguntas de seguridad (serÃ¡n usadas para recuperar contraseÃ±a).";
             this.lblInfo.Location = new Point(12, 12);
             this.lblInfo.Size = new Size(496, 30);
 
@@ -95,3 +95,4 @@ namespace Presentation
         }
     }
 }
+

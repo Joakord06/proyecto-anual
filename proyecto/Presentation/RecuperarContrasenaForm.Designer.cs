@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Windows.Forms;
 
@@ -33,52 +33,52 @@ namespace Presentation
             this.txtAnswer2 = new TextBox();
             this.btnSubmitAnswers = new Button();
             this.SuspendLayout();
-            // 
-            // txtUsername
-            // 
+            
+            
+            
             this.txtUsername.Location = new System.Drawing.Point(12, 12);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(200, 23);
-            // 
-            // btnLoadQuestions
-            // 
+            
+            
+            
             this.btnLoadQuestions.Location = new System.Drawing.Point(220, 10);
             this.btnLoadQuestions.Name = "btnLoadQuestions";
             this.btnLoadQuestions.Size = new System.Drawing.Size(120, 26);
             this.btnLoadQuestions.Text = "Cargar preguntas";
             this.btnLoadQuestions.UseVisualStyleBackColor = true;
             this.btnLoadQuestions.Click += new EventHandler(this.btnLoadQuestions_Click);
-            // 
-            // lblQ1
-            // 
+            
+            
+            
             this.lblQ1.AutoSize = true;
             this.lblQ1.Location = new System.Drawing.Point(12, 50);
             this.lblQ1.Name = "lblQ1";
             this.lblQ1.Size = new System.Drawing.Size(0, 15);
-            // 
-            // txtAnswer1
-            // 
+            
+            
+            
             this.txtAnswer1.Location = new System.Drawing.Point(12, 70);
             this.txtAnswer1.Name = "txtAnswer1";
             this.txtAnswer1.Size = new System.Drawing.Size(328, 23);
-            // 
-            // txtAnswer2
-            // 
+            
+            
+            
             this.txtAnswer2.Location = new System.Drawing.Point(12, 100);
             this.txtAnswer2.Name = "txtAnswer2";
             this.txtAnswer2.Size = new System.Drawing.Size(328, 23);
-            // 
-            // btnSubmitAnswers
-            // 
+            
+            
+            
             this.btnSubmitAnswers.Location = new System.Drawing.Point(12, 140);
             this.btnSubmitAnswers.Name = "btnSubmitAnswers";
             this.btnSubmitAnswers.Size = new System.Drawing.Size(120, 30);
             this.btnSubmitAnswers.Text = "Enviar respuestas";
             this.btnSubmitAnswers.UseVisualStyleBackColor = true;
             this.btnSubmitAnswers.Click += new EventHandler(this.btnSubmitAnswers_Click);
-            // 
-            // RecuperarContrasenaForm
-            // 
+            
+            
+            
             this.ClientSize = new System.Drawing.Size(360, 190);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.btnLoadQuestions);
@@ -90,10 +90,11 @@ namespace Presentation
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "RecuperarContrasenaForm";
-            this.Text = "Recuperar contraseña";
+            this.Text = "Recuperar contraseÃ±a";
             this.StartPosition = FormStartPosition.CenterParent;
             this.ResumeLayout(false);
             this.PerformLayout();
         }
     }
 }
+

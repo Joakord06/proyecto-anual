@@ -18,3 +18,4 @@ namespace DataAccess.Entities
         public bool DisallowPersonalData { get; set; }
     }
 }
+

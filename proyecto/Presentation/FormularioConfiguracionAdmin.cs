@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,7 +14,7 @@ namespace Presentation
         private readonly ConfigRepository _cfgRepo = new ConfigRepository();
         private readonly DataAccess.Repositories.UserRepository _userRepo = new DataAccess.Repositories.UserRepository();
 
-        // designer fields (declared in the Designer partial class)
+        
 
         public AdminConfigForm()
         {
@@ -28,7 +28,7 @@ namespace Presentation
             if (btnNavConfig != null) btnNavConfig.Click += (s, e) => ShowConfig();
             if (btnNavUsers != null) btnNavUsers.Click += (s, e) => ShowUsers();
             if (btnCreateUser != null) btnCreateUser.Click += BtnCreateUser_Click;
-            // wire selection and question buttons
+            
             if (dgvUsers != null) dgvUsers.SelectionChanged += (s, e) => LoadQuestionsForSelectedUser();
             var btnAdd = this.Controls.Find("btnAddQuestion", true).FirstOrDefault() as Button;
             var btnDel = this.Controls.Find("btnDeleteQuestion", true).FirstOrDefault() as Button;
@@ -119,14 +119,14 @@ namespace Presentation
                 pnlUsers.Visible = false;
             }
             this.grpRules.Visible = true;
-            // ensure config controls are on top
+            
             this.grpRules.BringToFront();
         }
 
         private void ShowUsers()
         {
             if (pnlUsers == null) return;
-            // hide config and show users panel, bring it to front to avoid overlap
+            
             this.grpRules.Visible = false;
             pnlUsers.Visible = true;
             pnlUsers.BringToFront();
@@ -138,7 +138,7 @@ namespace Presentation
             if (dgvUsers == null) return;
             dgvUsers.DataSource = null;
             var users = _userRepo.GetAllUsers();
-            // simple projection to anonymous objects
+            
             dgvUsers.DataSource = users.Select(u => new { u.Id, u.Username, u.Email, u.Role, u.IsFirstLogin, u.CreatedAt }).ToList();
             dgvUsers.AutoResizeColumns();
         }
@@ -152,10 +152,10 @@ namespace Presentation
             var role = cmbRole.SelectedItem?.ToString() ?? "User";
             if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(pwd))
             {
-                MessageBox.Show("Usuario y contraseña son obligatorios.");
+                MessageBox.Show("Usuario y contraseÃ±a son obligatorios.");
                 return;
             }
-            // compute hash username+password
+            
             string hash;
             using (var sha = System.Security.Cryptography.SHA256.Create())
             {
@@ -176,7 +176,7 @@ namespace Presentation
             {
                 _userRepo.AddUser(user, new (string, string)[0]);
                 MessageBox.Show("Usuario creado.");
-                // clear fields
+                
                 txtNewUsername.Text = "";
                 txtNewEmail.Text = "";
                 txtNewPassword.Text = "";
@@ -213,7 +213,8 @@ namespace Presentation
                 DisallowPersonalData = chkDisallowPersonal.Checked
             };
             _cfgRepo.SaveConfig(c);
-            MessageBox.Show("Configuración guardada.");
+            MessageBox.Show("ConfiguraciÃ³n guardada.");
         }
     }
 }
+

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Security.Cryptography;
 using System.Text;
 using System.Windows.Forms;
@@ -34,11 +34,11 @@ namespace Presentation
 
             if (nuevaPassword != confirmarPassword)
             {
-                MessageBox.Show("Las contraseñas no coinciden", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Las contraseÃ±as no coinciden", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            // find user by username
+            
             var user = _userService.GetUserByUsername(usuario);
             if (user == null)
             {
@@ -51,7 +51,7 @@ namespace Presentation
 
             if (resultado)
             {
-                MessageBox.Show("Contraseña actualizada correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("ContraseÃ±a actualizada correctamente", "Ã‰xito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }
             else
@@ -61,3 +61,4 @@ namespace Presentation
         }
     }
 }
+

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -28,35 +28,35 @@ namespace Presentation
             this.btnChangePassword = new Button();
             this.btnLogout = new Button();
 
-            // PanelUsuarioForm
+            
             this.Text = "Panel de usuario";
             this.ClientSize = new Size(420, 180);
             this.FormBorderStyle = FormBorderStyle.FixedDialog;
             this.StartPosition = FormStartPosition.CenterParent;
 
-            // lblWelcome
+            
             this.lblWelcome.Text = "Bienvenido";
             this.lblWelcome.Font = new Font(this.lblWelcome.Font.FontFamily, 12, FontStyle.Bold);
             this.lblWelcome.Location = new Point(12, 12);
             this.lblWelcome.Size = new Size(396, 28);
 
-            // lblUsername
+            
             this.lblUsername.Text = "Usuario: --";
             this.lblUsername.Location = new Point(12, 52);
             this.lblUsername.AutoSize = true;
 
-            // lblRole
+            
             this.lblRole.Text = "Rol: --";
             this.lblRole.Location = new Point(12, 80);
             this.lblRole.AutoSize = true;
 
-            // btnChangePassword
-            this.btnChangePassword.Text = "Cambiar contraseña";
+            
+            this.btnChangePassword.Text = "Cambiar contraseÃ±a";
             this.btnChangePassword.Location = new Point(12, 120);
             this.btnChangePassword.Size = new Size(140, 30);
             this.btnChangePassword.Click += BtnChangePassword_Click;
 
-            // btnManageQuestions
+            
             var btnManageQuestions = new Button();
             btnManageQuestions.Text = "Preguntas seguridad";
             btnManageQuestions.Location = new Point(160, 120);
@@ -64,8 +64,8 @@ namespace Presentation
             btnManageQuestions.Click += BtnManageQuestions_Click;
             this.Controls.Add(btnManageQuestions);
 
-            // btnLogout
-            this.btnLogout.Text = "Cerrar sesión";
+            
+            this.btnLogout.Text = "Cerrar sesiÃ³n";
             this.btnLogout.Location = new Point(300, 120);
             this.btnLogout.Size = new Size(108, 30);
             this.btnLogout.Click += BtnLogout_Click;
@@ -78,3 +78,4 @@ namespace Presentation
         }
     }
 }
+

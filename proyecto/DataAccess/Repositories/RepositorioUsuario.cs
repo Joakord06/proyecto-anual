@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using Microsoft.Data.SqlClient;
 using DataAccess.Entities;
@@ -94,7 +94,7 @@ namespace DataAccess.Repositories
                 cmd.Parameters.AddWithValue("@isFirst", user.IsFirstLogin);
                 cmd.Parameters.AddWithValue("@role", user.Role);
                 int userId = (int)cmd.ExecuteScalar()!;
-                // insert questions
+                
                 foreach (var (Question, AnswerHash) in questions)
                 {
                     using var qcmd = new SqlCommand("INSERT INTO SecurityQuestions (UserId, Question, AnswerHash) VALUES (@userId,@q,@a)", conn, tx);
@@ -145,11 +145,11 @@ namespace DataAccess.Repositories
         {
             using var conn = new SqlConnection(_connectionString);
             conn.Open();
-            // Insert history first
+            
             using (var cmdHist = new SqlCommand("INSERT INTO PasswordHistory (UserId, PasswordHash) VALUES (@userId,@hash)", conn))
             {
                 cmdHist.Parameters.AddWithValue("@userId", userId);
-                cmdHist.Parameters.AddWithValue("@hash", newHash); // store old/new as desired; here we store new for record
+                cmdHist.Parameters.AddWithValue("@hash", newHash); 
                 cmdHist.ExecuteNonQuery();
             }
             using var cmd = new SqlCommand("UPDATE Users SET PasswordHash=@hash, IsFirstLogin=0 WHERE Id=@id", conn);
@@ -226,3 +226,4 @@ namespace DataAccess.Repositories
         }
     }
 }
+

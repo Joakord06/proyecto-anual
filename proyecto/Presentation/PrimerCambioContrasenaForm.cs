@@ -1,4 +1,4 @@
- 
+﻿ 
 using System;
 using System.Windows.Forms;
 using LayeredApp.Business.Services;
@@ -20,8 +20,8 @@ namespace Presentation
 
         private void LoadQuestions()
         {
-            // If system requires security questions on first login, load them here.
-            // Currently the designer contains only new/confirm password fields.
+            
+            
         }
 
         private void btnAccept_Click(object sender, EventArgs e)
@@ -30,13 +30,13 @@ namespace Presentation
             var confirm = txtConfirmPassword.Text ?? string.Empty;
             if (newPass != confirm)
             {
-                MessageBox.Show("Las contraseñas no coinciden");
+                MessageBox.Show("Las contraseÃ±as no coinciden");
                 return;
             }
 
             if (_userService.ChangePasswordFirstTime(_userId, newPass, out var reason))
             {
-                MessageBox.Show("Contraseña establecida. Ya podés ingresar.");
+                MessageBox.Show("ContraseÃ±a establecida. Ya podÃ©s ingresar.");
                 this.Close();
             }
             else
@@ -46,3 +46,4 @@ namespace Presentation
         }
     }
 }
+

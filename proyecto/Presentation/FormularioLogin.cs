@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Linq;
 using System.Windows.Forms;
 using LayeredApp.Business.Services;
@@ -22,7 +22,7 @@ namespace Presentation
             var u = _userService.Login(user, pass);
             if (u == null)
             {
-                MessageBox.Show("Usuario o contraseña incorrectos.");
+                MessageBox.Show("Usuario o contraseÃ±a incorrectos.");
                 return;
             }
             if (u.IsFirstLogin)
@@ -32,7 +32,7 @@ namespace Presentation
                 first.ShowDialog(this);
                 return;
             }
-            // Abrir panel según rol
+            
             if (string.Equals(u.Role, "Admin", StringComparison.OrdinalIgnoreCase))
             {
                 var admin = new AdminConfigForm();
@@ -41,7 +41,7 @@ namespace Presentation
             }
             else
             {
-                // map to DTO and open user panel
+                
                 try
                 {
                     var dto = LayeredApp.Business.Mappers.EntityMapper.ToDto(u);
@@ -71,3 +71,4 @@ namespace Presentation
         }
     }
 }
+

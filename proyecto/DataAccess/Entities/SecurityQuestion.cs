@@ -14,3 +14,4 @@ namespace DataAccess.Entities
         public string AnswerHash { get; set; } = null!;
     }
 }
+

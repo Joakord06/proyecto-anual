@@ -1,4 +1,4 @@
-namespace LayeredApp.Business.DTOs
+﻿namespace LayeredApp.Business.DTOs
 {
     public class SystemConfigDto
     {
@@ -12,3 +12,4 @@ namespace LayeredApp.Business.DTOs
         public bool DisallowPersonalData { get; set; }
     }
 }
+

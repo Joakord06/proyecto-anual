@@ -1,4 +1,4 @@
-namespace LayeredApp.Business.DTOs
+﻿namespace LayeredApp.Business.DTOs
 {
     public class SecurityQuestionDto
     {
@@ -7,3 +7,4 @@ namespace LayeredApp.Business.DTOs
         public string Question { get; set; } = null!;
     }
 }
+

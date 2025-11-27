@@ -1,4 +1,4 @@
-// ...existing code...
+﻿
 using System;
 using System.Windows.Forms;
 using System.Drawing;
@@ -38,77 +38,77 @@ namespace Presentation
             btnChange = new Button();
             btnClose = new Button();
             SuspendLayout();
-            // 
-            // lblUsuario
-            // 
+            
+            
+            
             lblUsuario.AutoSize = true;
             lblUsuario.Location = new Point(20, 20);
             lblUsuario.Name = "lblUsuario";
             lblUsuario.Size = new Size(62, 20);
             lblUsuario.TabIndex = 0;
             lblUsuario.Text = "Usuario:";
-            // 
-            // txtUsuario
-            // 
+            
+            
+            
             txtUsuario.Location = new Point(160, 16);
             txtUsuario.Name = "txtUsuario";
             txtUsuario.Size = new Size(240, 27);
             txtUsuario.TabIndex = 1;
             txtUsuario.UseSystemPasswordChar = false;
 
-            // lblCurrentPassword
-            // 
+            
+            
             lblCurrentPassword.AutoSize = true;
             lblCurrentPassword.Location = new Point(20, 48);
             lblCurrentPassword.Name = "lblCurrentPassword";
             lblCurrentPassword.Size = new Size(140, 20);
             lblCurrentPassword.TabIndex = 2;
-            lblCurrentPassword.Text = "Contraseña actual:";
+            lblCurrentPassword.Text = "ContraseÃ±a actual:";
 
-            // txtCurrentPassword
-            // 
+            
+            
             txtCurrentPassword.Location = new Point(160, 44);
             txtCurrentPassword.Name = "txtCurrentPassword";
             txtCurrentPassword.Size = new Size(240, 27);
             txtCurrentPassword.TabIndex = 3;
             txtCurrentPassword.UseSystemPasswordChar = true;
-            // 
-            // lblNew
-            // 
+            
+            
+            
             lblNew.AutoSize = true;
             lblNew.Location = new Point(20, 88);
             lblNew.Name = "lblNew";
             lblNew.Size = new Size(130, 20);
             lblNew.TabIndex = 4;
-            lblNew.Text = "Nueva contraseña:";
-            // 
-            // txtNuevaPassword
-            // 
+            lblNew.Text = "Nueva contraseÃ±a:";
+            
+            
+            
             txtNuevaPassword.Location = new Point(160, 84);
             txtNuevaPassword.Name = "txtNuevaPassword";
             txtNuevaPassword.Size = new Size(240, 27);
             txtNuevaPassword.TabIndex = 5;
             txtNuevaPassword.UseSystemPasswordChar = true;
-            // 
-            // lblConfirm
-            // 
+            
+            
+            
             lblConfirm.AutoSize = true;
             lblConfirm.Location = new Point(20, 124);
             lblConfirm.Name = "lblConfirm";
             lblConfirm.Size = new Size(154, 20);
             lblConfirm.TabIndex = 6;
-            lblConfirm.Text = "Confirmar contraseña:";
-            // 
-            // txtConfirmarPassword
-            // 
+            lblConfirm.Text = "Confirmar contraseÃ±a:";
+            
+            
+            
             txtConfirmarPassword.Location = new Point(160, 120);
             txtConfirmarPassword.Name = "txtConfirmarPassword";
             txtConfirmarPassword.Size = new Size(240, 27);
             txtConfirmarPassword.TabIndex = 7;
             txtConfirmarPassword.UseSystemPasswordChar = true;
-            // 
-            // btnChange
-            // 
+            
+            
+            
             btnChange.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btnChange.Location = new Point(240, 160);
             btnChange.Name = "btnChange";
@@ -116,9 +116,9 @@ namespace Presentation
             btnChange.TabIndex = 8;
             btnChange.Text = "Cambiar";
             btnChange.Click += new EventHandler(this.btnCambiar_Click);
-            // 
-            // btnClose
-            // 
+            
+            
+            
             btnClose.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btnClose.DialogResult = DialogResult.Cancel;
             btnClose.Location = new Point(325, 160);
@@ -126,9 +126,9 @@ namespace Presentation
             btnClose.Size = new Size(75, 28);
             btnClose.TabIndex = 7;
             btnClose.Text = "Cerrar";
-            // 
-            // ChangePasswordForm
-            // 
+            
+            
+            
             ClientSize = new Size(420, 200);
             Controls.Add(lblUsuario);
             Controls.Add(txtUsuario);
@@ -144,10 +144,11 @@ namespace Presentation
             MaximizeBox = false;
             Name = "FormularioCambioContrasena";
             StartPosition = FormStartPosition.CenterParent;
-            Text = "Cambiar contraseña";
+            Text = "Cambiar contraseÃ±a";
             ResumeLayout(false);
             PerformLayout();
         }
     }
 }
-// ...existing code...
+
+

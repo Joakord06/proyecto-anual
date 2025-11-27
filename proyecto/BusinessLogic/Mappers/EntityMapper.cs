@@ -1,4 +1,4 @@
-using DataAccess.Entities;
+﻿using DataAccess.Entities;
 using LayeredApp.Business.DTOs;
 
 namespace LayeredApp.Business.Mappers
@@ -47,3 +47,4 @@ namespace LayeredApp.Business.Mappers
         }
     }
 }
+
